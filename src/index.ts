@@ -1,15 +1,16 @@
 import { getDay1Part1Solution, getDay1Part2Solution } from "./days/day-1";
+import { getDay2Part1Solution, getDay2Part2Solution } from "./days/day-2";
 
 function printDay({
-    number_of_day,
-    part_1,
-    part_2,
+	number_of_day,
+	part_1,
+	part_2,
 }: {
-  number_of_day: number;
-  part_1: number;
-  part_2: number;
+	number_of_day: number;
+	part_1: number;
+	part_2: number;
 }): void {
-    console.log(`
+	console.log(`
     ${"*".repeat(16)}
     🎄 Day ${number_of_day}
     ${"-".repeat(16)}
@@ -19,9 +20,16 @@ function printDay({
 }
 
 const day_1 = {
-    number_of_day: 1,
-    part_1: getDay1Part1Solution({ file_path: "src/inputs/day-1.txt" }),
-    part_2: getDay1Part2Solution({ file_path: "src/inputs/day-1.txt" }),
-}; 
+	number_of_day: 1,
+	part_1: getDay1Part1Solution({ file_path: "src/inputs/day-1.txt" }),
+	part_2: getDay1Part2Solution({ file_path: "src/inputs/day-1.txt" }),
+};
+
+const day_2 = {
+	number_of_day: 2,
+	part_1: getDay2Part1Solution({ file_path: "src/inputs/day-2.txt" }),
+	part_2: getDay2Part2Solution({ file_path: "src/inputs/day-2.txt" }),
+};
 
 printDay(day_1);
+printDay(day_2);
