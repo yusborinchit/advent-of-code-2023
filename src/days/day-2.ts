@@ -1,6 +1,6 @@
 import fs from "fs";
 
-export function getDay2Part1Solution({ file_path }: { file_path: string }): number {
+function solvePart1({ file_path }: { file_path: string }): number {
 	const content = fs.readFileSync(file_path, "utf-8");
 
 	const total_cubes: { [key: string]: number } = {
@@ -29,7 +29,7 @@ export function getDay2Part1Solution({ file_path }: { file_path: string }): numb
 	return result;
 }
 
-export function getDay2Part2Solution({ file_path }: { file_path: string }): number {
+function solvePart2({ file_path }: { file_path: string }): number {
 	const content = fs.readFileSync(file_path, "utf-8");
 
 	const result = content.split("\r\n").reduce((acc, line) => {
@@ -59,4 +59,8 @@ export function getDay2Part2Solution({ file_path }: { file_path: string }): numb
 	}, 0);
 
 	return result;
+}
+
+export function getDay2Solutions({ file_path }: { file_path: string }) {
+	return { part_1: solvePart1({ file_path }), part_2: solvePart2({ file_path }) };
 }

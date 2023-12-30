@@ -1,35 +1,19 @@
-import { getDay1Part1Solution, getDay1Part2Solution } from "./days/day-1";
-import { getDay2Part1Solution, getDay2Part2Solution } from "./days/day-2";
+import { getDay1Solutions } from "./days/day-1";
+import { getDay2Solutions } from "./days/day-2";
+import { getDay3Solutions } from "./days/day-3";
+import { printDay } from "./utils";
 
-function printDay({
-	number_of_day,
-	part_1,
-	part_2,
-}: {
-	number_of_day: number;
-	part_1: number;
-	part_2: number;
-}): void {
-	console.log(`
-    ${"*".repeat(16)}
-    🎄 Day ${number_of_day}
-    ${"-".repeat(16)}
-    Part 1 Solution: ${part_1}
-    Part 2 Solution: ${part_2}
-  `);
-}
-
-const day_1 = {
+printDay({
 	number_of_day: 1,
-	part_1: getDay1Part1Solution({ file_path: "src/inputs/day-1.txt" }),
-	part_2: getDay1Part2Solution({ file_path: "src/inputs/day-1.txt" }),
-};
+	...getDay1Solutions({ file_path: "src/inputs/day-1.txt" }),
+});
 
-const day_2 = {
+printDay({
 	number_of_day: 2,
-	part_1: getDay2Part1Solution({ file_path: "src/inputs/day-2.txt" }),
-	part_2: getDay2Part2Solution({ file_path: "src/inputs/day-2.txt" }),
-};
+	...getDay2Solutions({ file_path: "src/inputs/day-2.txt" }),
+});
 
-printDay(day_1);
-printDay(day_2);
+printDay({
+	number_of_day: 3,
+	...getDay3Solutions({ file_path: "src/inputs/day-3.txt" }),
+});
