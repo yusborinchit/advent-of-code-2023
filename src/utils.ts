@@ -12,4 +12,5 @@ export function printDay({
 	console.log("-".repeat(16));
 	console.log(`Part 1 Solution: ${part_1}`);
 	console.log(`Part 2 Solution: ${part_2}`);
+	console.log("-".repeat(16));
 }

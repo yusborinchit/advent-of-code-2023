@@ -1,6 +1,7 @@
 import { getDay1Solutions } from "./days/day-1";
 import { getDay2Solutions } from "./days/day-2";
 import { getDay3Solutions } from "./days/day-3";
+import { getDay4Solutions } from "./days/day-4";
 import { printDay } from "./utils";
 
 printDay({
@@ -16,4 +17,9 @@ printDay({
 printDay({
 	number_of_day: 3,
 	...getDay3Solutions({ file_path: "src/inputs/day-3.txt" }),
+});
+
+printDay({
+	number_of_day: 4,
+	...getDay4Solutions({ file_path: "src/inputs/day-4.txt" }),
 });
